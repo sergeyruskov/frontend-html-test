@@ -1,0 +1,10 @@
+//Серый текст
+.support-info {
+	font-size : 12px;
+	color     : map-get(map-get($color, text), support-info);
+}
+
+	.support-info--italic {
+		@extend .support-info;
+		font-style: italic;
+	}

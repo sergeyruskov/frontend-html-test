@@ -1,0 +1,31 @@
+//Кнопка на меню на мобильных устройствах
+#burger {
+	display    : none;
+	margin     : em(5px) auto em(10px) auto;
+	padding    : em(9px) em(10px);
+
+	width      : em(22px);
+	height     : em(14px);
+
+	background : #999;
+	cursor     : pointer;
+	&:hover {
+		background: deeppink;
+	}
+
+	@include xs {
+		display: block;
+	}
+
+	>span {
+		@extend %block;
+		margin    : auto;
+		height    : em(2px);
+
+		background: map-get(map-get($color, text), white);
+	}
+
+	>span + span {
+		margin-top: em(4px);
+	}
+}

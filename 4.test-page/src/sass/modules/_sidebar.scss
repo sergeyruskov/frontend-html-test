@@ -1,0 +1,31 @@
+//Сайдбар
+.sidebar {
+	@extend .left;
+	width  : em(200px);
+	padding: 0 em(40px) 0 0;
+
+	@include tablet {
+		width  : map-get(map-get($screen, tablet), min);
+		padding: 0;
+		margin : auto;
+		float  : none;
+	}
+
+	@include xs {
+		margin : auto;
+		width  : map-get(map-get($layout, xs), content);
+	}
+
+	&__content {
+		@extend %margin0;
+		line-height   : 1.461;
+		letter-spacing: -.1px;
+	}
+
+	>.sidebar__content + .sidebar__content {
+		padding: em(43px) 0 0;
+		@include tablet--less {
+			padding: em(10px) 0 0;
+		}
+	}
+}

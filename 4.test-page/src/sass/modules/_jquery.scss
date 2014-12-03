@@ -1,0 +1,23 @@
+//jQuery class
+
+//Показывает правильность или не правильность заполнения формы
+.border--success {
+	border: 1px solid map-get(map-get($color, border), success);
+}
+
+.border--danger {
+	border: 1px solid map-get(map-get($color, border), danger);
+}
+
+//Подсветка label в radiobutton, вынужденная мера из-за IE8
+.bg--select {
+	background   : map-get(map-get($color, bg), select);
+	color        : map-get(map-get($color, text), white);
+	border-radius: em(4px);
+	border-bottom: 0 !important;
+}
+
+//Burger
+.hide {
+	display: none;
+}

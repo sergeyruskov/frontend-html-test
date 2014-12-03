@@ -1,0 +1,5 @@
+@import "compass/utilities/sprites";
+@import "images/*.png";
+@include all-images-sprites;
+// $my-icons-sprite-dimensions: true;
+// $my-icons-spacing: 150px; //расстояние между картинками

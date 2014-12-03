@@ -1,0 +1,45 @@
+//Кнопки
+.form__element--submit {
+	@extend %overflow-hidden;
+	@extend %box-sizing;
+	@extend %width100;
+	margin    : em(13px) 0 0;
+	padding   : em(15px) em(10px);
+
+	background: map-get(map-get($color, bg), wrapper-submit);
+	@include tablet--less {
+		margin: em(10px) 0;
+	}
+}
+
+	.button--cancel {
+		background: grey;//IE 8
+		background: map-get(map-get($color, bg), btn-default);
+		box-shadow: inset 0 -1px 3px #7e7e7e;
+	}
+
+	.button--submit {
+		background: green;
+		background: map-get(map-get($color, bg), btn-success);
+		box-shadow: inset 0 -1px 3px #7da703;
+	}
+
+	.button--submit,
+	.button--cancel {
+		@extend %border0;
+		@extend %hover;
+		padding      : em(10px) em(33px);
+		border-radius: $border-radius--large;
+
+		color : map-get(map-get($color, text), white);
+
+		cursor: pointer;
+
+		&:focus {
+			outline: none;
+		}
+
+		@include xs {
+			padding: em(9px);
+		}
+	}

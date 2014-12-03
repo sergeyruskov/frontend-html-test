@@ -1,0 +1,26 @@
+//Общая информация
+.common-info {
+	@extend %width100;
+
+	@include xs {
+		margin: em(10px) 0 0;
+	}
+
+	>tbody>tr>td:first-child {
+		width         : 20%;
+		letter-spacing: .4px;
+		text-indent   : 3px;
+		@include xs {
+			width: 25%;
+		}
+	}
+	>tbody>tr>td:last-child{
+		color: map-get(map-get($color, text), support-info);
+		>hr {
+			border-top: 1px solid;
+			border-bottom: 0;
+			border-left: 0;
+			border-right: 0;
+		}
+	}
+}

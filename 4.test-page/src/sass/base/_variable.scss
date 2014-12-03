@@ -1,0 +1,65 @@
+$font-size--base      : 13px;
+$font-family          : sans-serif;
+
+$border-radius--large : 16px;
+$border-radius--normal: 13px;
+$border-radius--small : 2px;
+
+
+// Breaqpoint Media Query
+$screen: (
+	sm: (
+		min: 1024px
+	),
+	tablet: (
+		max: 928px,
+		min: 688px
+	),
+	xs: (
+		max: 687px,
+	)
+);
+
+//Основные части страницы
+$layout: (
+	sm: (
+		content        : 928px,
+		top            : 40px,
+		gutter         : 40px,
+		sidebar        : 200px,
+		right-column   : 688px
+	),
+	xs: (
+		content: 95%
+	)
+);
+
+//Цвета
+$color: (
+	bg: (
+		select        : #8cb903,
+		done          : linear-gradient(#369e17, #3bad19),
+		during        : linear-gradient(#94c404, #a4d807),
+		not-started   : #f6f6f6,
+		wrapper-submit: #f2f2f2,
+		btn-success   : linear-gradient(#a6db08, #93c303),
+		btn-default   : linear-gradient(#c2c2c2, #969696),
+		line          : #cacaca
+	),
+
+	text: (
+		white       : #fff,
+		purple      : #4900a4,
+		green       : #14731b,
+		blue        : #0e73d9,
+		orange      : #dd4c00,
+		grey        : #333333,
+		red         : #b60700,
+		support-info: #666666
+	),
+
+	border: (
+		success: #4cae4c,
+		danger : #d43f3a
+	)
+);

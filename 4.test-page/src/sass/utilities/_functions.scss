@@ -1,0 +1,25 @@
+// Конвертирует px в em
+@function em($target, $context: $font-size--base) {
+	@return ($target / $context) * 1em;
+}
+
+// Media query планшеты
+@mixin tablet {
+	@media (max-width: map-get(map-get($screen, tablet), max)) and (min-width: map-get(map-get($screen, tablet), min)) {
+		@content;
+	}
+}
+
+// Media query телефоны
+@mixin xs {
+	@media (max-width: map-get(map-get($screen, xs), max)) {
+		@content;
+	}
+}
+
+// Все что меньше tablet
+@mixin tablet--less {
+	@media (max-width: map-get(map-get($screen, tablet), max)) {
+		@content;
+	}
+}

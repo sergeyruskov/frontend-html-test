@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Progressbar</title>
+	<style>
+		progress {
+			position          : relative;
+			background        : #fff;
+			width             : 400px;
+			height            : 20px;
+			margin            : auto;
+			display           : block;
+			/*IE 10+*/
+			color             : #2DC83D;
+			border            : 1px solid #ccc;
+			border-radius     : 50px;
+			/* Превращает progress bar в обычный блок */
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+		}
+
+		/*Процент выполенения*/
+		/*Так как IE11 не дал прикрепить псевдоэлементы к progress пришлось создать доп элемент обертку*/
+		.progress--wrapper:before {
+			color      : #000;
+			content    : '20%';
+			position   : absolute;
+			margin-top : 3px;
+			left       : 50%;
+			font-weight: 700;
+			font-family: sans-serif;
+			z-index    : 1;
+		}
+
+		/* Прогресс бар */
+		progress::-webkit-progress-bar{
+			background   : #fff;
+			border-radius: 50px;
+			box-shadow   : inset 0 0 0 1px rgba(200, 200, 200, 0.5);
+		}
+
+		progress::-moz-progress-bar {
+			background   : #2DC83D;
+			border-radius: 50px;
+		}
+
+		/* Полоса загрузки */
+		progress::-webkit-progress-value {
+			background   : linear-gradient(#00ee00, #2DC83D, #00ee00);
+			border-radius: 50px;
+		}
+
+		.ie9 {
+			display: none;
+		}
+	</style>
+	<!-- Стили для всех браузеров младше IE10, так как в них не поддерживается progress, и так уж повезло, что все брузеры старше IE9 не парсят код в условных операторах, поэтому можно использовать условный оператор для всех IE -->
+	<!--[if IE]>
+		<style>
+			/*В IE 9 видна рамочка progress, а в IE8 нет, дабы задавать одинаковые стили обоим браузерам сделаем свой normalize*/
+			progress {
+				border: 0;
+			}
+
+			.progress--wrapper {
+				height: 20px;
+			}
+			/*В ie8 progress пропадает совсем, поэтому придется задать много повторяющихся классов из progress уже для div*/
+			.ie9 {
+				margin       : auto;
+				display      : block;
+				position     : relative;
+				height       : 20px;
+				width        : 400px;
+				border       : 1px solid #ccc;
+				border-radius: 50px;
+			}
+				/*Эмуляция value*/
+				.progressbar {
+					position     : absolute;
+					top          : 0;
+					width        : 20%;
+					height       : 20px;
+					background   : #2DC83D;
+					border-radius: 50px;
+				}
+		</style>
+	<![endif]-->
+</head>
+<body>
+	<div class="progress--wrapper">
+		<progress max="100" value="20">
+			<div class="ie9">
+				<div class="progressbar"></div>
+			</div>
+		</progress>
+	</div>
+</body>
+</html>

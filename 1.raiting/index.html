@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Raiting</title>
+	<style>
+	.raiting {
+		margin: auto;
+		width: 80px;
+		overflow: hidden;/*защита от схлопывания*/
+	}
+
+		/*Все звезды*/
+		.grey {
+			float    : left;
+			font-size: 15px;/*Размер звезд*/
+			cursor   : pointer;
+			color    : grey;
+		}
+
+		/*Отмеченные звезды*/
+		.orange,
+		.orange-temporary {
+			color: orange;
+		}
+	</style>
+</head>
+<body>
+	<div class="raiting">
+		<div class="grey">★</div>
+		<div class="grey">★</div>
+		<div class="grey">★</div>
+		<div class="grey">★</div>
+		<div class="grey">★</div>
+	</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

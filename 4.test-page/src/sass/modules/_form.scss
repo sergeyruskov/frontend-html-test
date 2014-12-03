@@ -1,0 +1,158 @@
+//Форма
+input[name="name"]:focus,
+input[name="surname"]:focus,
+input[name="patronymic"]:focus,
+input[name="birthplace"]:focus {
+	outline: 0;
+}
+
+.form {
+	@extend %overflow-hidden;
+	@extend %width100;
+	padding: em(18px) 0 0;
+	@include xs {
+		padding: em(10px) 0 0;
+	}
+
+	%form__element {
+		@extend %box-sizing;
+		@extend .bold;
+		padding: 0 0 em(31px);
+		@include xs {
+			width: 100% !important;
+		}
+	}
+
+	%form__element--short,
+	%form__element--long {
+		@extend .left;
+	}
+
+	%form__element--short {
+		margin-right: em(41px);
+		width       : em(184px);
+	}
+
+
+	%form__element--long {
+		width: em(229px);
+	}
+
+	%form__element--input,
+	%form__element--select {
+		>label {
+			@extend %block;
+			padding:0 0 em(8px);
+		}
+
+		>input,select {
+			@extend %box-sizing;
+			@extend %width100;
+		}
+	}
+
+	%form__element--input {
+		height: em(76px);
+		>input {
+			height: em(22px)
+		}
+	}
+
+	%form__element--select {
+		height: em(74px);
+		>select {
+			height: em(20px)
+		}
+	}
+
+	%form__element--fieldset {
+		@extend %margin0;
+		@extend %border0;
+		height: em(74px);
+		>legend {
+			padding: 0 0 em(6px);
+		}
+	}
+
+	%form__element--radio {
+		>.radio-wrapper {
+			>label {
+				@extend %inline-block;
+				border-bottom: 1px dotted;
+				cursor       : pointer;
+				padding      : em(2.5px) em(6px);
+			}
+
+			>input {
+				display: none;
+			}
+		}
+	}
+
+	&--wrapper {
+		@include tablet {
+			padding: em(20px) 0 0;
+		}
+	}
+
+		&__element--input--short {
+			@extend %form__element;
+			@extend %form__element--input;
+			@extend %form__element--short;
+		}
+
+		&__element--input--long {
+			@extend %form__element;
+			@extend %form__element--input;
+			@extend %form__element--long;
+		}
+
+		&__element--radio--short--fieldset {
+			@extend %form__element;
+			@extend %form__element--radio;
+			@extend %form__element--short;
+			@extend %form__element--fieldset;
+		}
+
+		&__element--select--long {
+			@extend %form__element;
+			@extend %form__element--select;
+			@extend %form__element--long;
+		}
+
+		&__element--select--short {
+			@extend %form__element;
+			@extend %form__element--select;
+			@extend %form__element--short;
+		}
+
+		&__element--birth-day {
+			@extend %form__element;
+			@extend %margin0;
+			@extend %border0;
+			@extend .left;
+
+			>legend {
+				padding:0 0 em(9px);
+			}
+
+			>input {
+				width: auto;
+			}
+
+			>select {
+				margin: 0 em(7px) 0 0;
+			}
+		}
+
+		&__element--birthplace {
+			@extend .left;
+			@extend %width100;
+
+			>input {
+				@extend %box-sizing;
+				@extend %width100;
+				margin: em(7px) 0 em(9px);
+			}
+		}
+}

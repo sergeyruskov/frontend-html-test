@@ -1,0 +1,81 @@
+//Навигация
+.navigation {
+	@extend %box-sizing;
+	@extend .right;
+	font-size: 15px;
+
+	width  : em(map-get(map-get($layout, sm), right-column), 15px);
+	padding: em(26px,15px) 0 em(25px,15px) em(50px,15px);
+	margin : 0 0 em(57px,15px);
+
+	border-radius: $border-radius--normal;
+	box-shadow   : 0 em(1px,15px) em(3px,15px) map-get(map-get($color, bg), line);
+
+	@include tablet {
+		margin: 0;
+		&--wrapper {
+			width  : map-get(map-get($screen, tablet), min);
+			padding: em(5px) 0 em(20px);
+			margin : 0 auto;
+		}
+	}
+
+	@include xs {
+		width        : auto;
+		padding      : em(5px);
+		margin       : 0 0 em(15px);
+		border-radius: 0;
+		float        : none;
+		&>a {
+			display   : block;
+			font-size : 18px;
+		}
+		>a + a {
+			padding   : em(5px) 0 !important;
+		}
+	}
+
+	//Предотвращение схлопывания
+	&--wrapper:after {
+		@extend %block;
+		content: "";
+		clear  : both;
+	}
+
+		%navigation__link {
+			padding: 0 em(24px,15px) 0 0;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		&__link--purple {
+			@extend %navigation__link;
+			color: map-get(map-get($color, text), purple)
+		}
+
+		&__link--green {
+			@extend %navigation__link;
+			color: map-get(map-get($color, text), green)
+		}
+
+		&__link--blue {
+			@extend %navigation__link;
+			color: map-get(map-get($color, text), blue)
+		}
+
+		&__link--orange {
+			@extend %navigation__link;
+			color: map-get(map-get($color, text), orange)
+		}
+
+		&__link--grey {
+			@extend %navigation__link;
+			color: map-get(map-get($color, text), grey)
+		}
+
+		&__link--red {
+			@extend %navigation__link;
+			color: map-get(map-get($color, text), red)
+		}
+}

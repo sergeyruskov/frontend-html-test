@@ -1,0 +1,465 @@
+.button--submit:hover,
+.button--cancel:hover {
+  background: deeppink;
+}
+
+body, .navigation, .progressbar, .progressbar .progressbar__division--done, .progressbar .progressbar__division--during, .progressbar .progressbar__division--not-started, .form .form__element--input--short, .form .form__element--input--long, .form .form__element--radio--short--fieldset, .form .form__element--select--long, .form .form__element--select--short, .form .form__element--birth-day, .form .form__element--input--short > input, .form .form__element--input--long > input, .form .form__element--input--short select, .form .form__element--input--long select,
+.form .form__element--select--long > input,
+.form .form__element--select--short > input,
+.form .form__element--select--long select,
+.form .form__element--select--short select, .form__element--birthplace > input, .form__element--submit {
+  box-sizing: border-box;
+}
+
+.progressbar, .progressbar .progressbar__division--done, .progressbar .progressbar__division--during, .progressbar .progressbar__division--not-started, .form .form__element--radio--short--fieldset > .radio-wrapper > label {
+  display: inline-block;
+}
+
+.navigation--wrapper:after, .form .form__element--input--short > label, .form .form__element--input--long > label,
+.form .form__element--select--long > label,
+.form .form__element--select--short > label, #burger > span {
+  display: block;
+}
+
+.wrapper--content, .form, .form__element--submit {
+  overflow: hidden;
+}
+
+body, .wrapper--content {
+  margin: auto;
+}
+
+.sidebar__content, .form .form__element--radio--short--fieldset, .form__element--birth-day {
+  margin: 0;
+}
+
+.progressbar, .common-info, .form, .form .form__element--input--short > input, .form .form__element--input--long > input, .form .form__element--input--short select, .form .form__element--input--long select,
+.form .form__element--select--long > input,
+.form .form__element--select--short > input,
+.form .form__element--select--long select,
+.form .form__element--select--short select, .form__element--birthplace, .form__element--birthplace > input, .form__element--submit {
+  width: 100%;
+}
+
+.form .form__element--radio--short--fieldset, .form__element--birth-day, .button--submit,
+.button--cancel {
+  border: 0;
+}
+
+.right, .navigation, .progressbar > tbody {
+  float: right;
+}
+
+.left, .main, .sidebar, .progressbar__header, .form .form__element--input--short, .form .form__element--radio--short--fieldset, .form .form__element--select--short,
+.form .form__element--input--long,
+.form .form__element--select--long, .form__element--birth-day, .form__element--birthplace {
+  float: left;
+}
+
+.bold, .form .form__element--input--short, .form .form__element--input--long, .form .form__element--radio--short--fieldset, .form .form__element--select--long, .form .form__element--select--short, .form .form__element--birth-day {
+  font-weight: 700;
+}
+
+.border--success {
+  border: 1px solid #4cae4c;
+}
+
+.border--danger {
+  border: 1px solid #d43f3a;
+}
+
+.bg--select {
+  background: #8cb903;
+  color: #fff;
+  border-radius: 0.3076923077em;
+  border-bottom: 0 !important;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  font-size: 13px;
+  font-family: sans-serif;
+  max-width: 78.7692307692em;
+  padding: 40px 0 0;
+}
+@media (max-width: 928px) {
+  body {
+    padding: 0;
+  }
+}
+
+.wrapper--content {
+  width: 71.3846153846em;
+}
+@media (max-width: 928px) and (min-width: 688px) {
+  .wrapper--content {
+    width: 688px;
+  }
+}
+@media (max-width: 687px) {
+  .wrapper--content {
+    width: 95%;
+  }
+}
+
+.main {
+  width: 52.9230769231em;
+}
+@media (max-width: 928px) and (min-width: 688px) {
+  .main {
+    float: none;
+    margin: auto;
+    width: 688px;
+  }
+}
+@media (max-width: 687px) {
+  .main {
+    width: 100%;
+  }
+}
+
+.navigation {
+  font-size: 15px;
+  width: 45.8666666667em;
+  padding: 1.7333333333em 0 1.6666666667em 3.3333333333em;
+  margin: 0 0 3.8em;
+  border-radius: 13px;
+  box-shadow: 0 0.0666666667em 0.2em #cacaca;
+}
+@media (max-width: 928px) and (min-width: 688px) {
+  .navigation {
+    margin: 0;
+  }
+  .navigation--wrapper {
+    width: 688px;
+    padding: 0.3846153846em 0 1.5384615385em;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 687px) {
+  .navigation {
+    width: auto;
+    padding: 0.3846153846em;
+    margin: 0 0 1.1538461538em;
+    border-radius: 0;
+    float: none;
+  }
+  .navigation > a {
+    display: block;
+    font-size: 18px;
+  }
+  .navigation > a + a {
+    padding: 0.3846153846em 0 !important;
+  }
+}
+.navigation--wrapper:after {
+  content: "";
+  clear: both;
+}
+.navigation .navigation__link--purple, .navigation .navigation__link--green, .navigation .navigation__link--blue, .navigation .navigation__link--orange, .navigation .navigation__link--grey, .navigation .navigation__link--red {
+  padding: 0 1.6em 0 0;
+}
+.navigation .navigation__link--purple:hover, .navigation .navigation__link--green:hover, .navigation .navigation__link--blue:hover, .navigation .navigation__link--orange:hover, .navigation .navigation__link--grey:hover, .navigation .navigation__link--red:hover {
+  text-decoration: none;
+}
+.navigation__link--purple {
+  color: #4900a4;
+}
+.navigation__link--green {
+  color: #14731b;
+}
+.navigation__link--blue {
+  color: #0e73d9;
+}
+.navigation__link--orange {
+  color: #dd4c00;
+}
+.navigation__link--grey {
+  color: #333333;
+}
+.navigation__link--red {
+  color: #b60700;
+}
+
+.sidebar {
+  width: 15.3846153846em;
+  padding: 0 3.0769230769em 0 0;
+}
+@media (max-width: 928px) and (min-width: 688px) {
+  .sidebar {
+    width: 688px;
+    padding: 0;
+    margin: auto;
+    float: none;
+  }
+}
+@media (max-width: 687px) {
+  .sidebar {
+    margin: auto;
+    width: 95%;
+  }
+}
+.sidebar__content {
+  line-height: 1.461;
+  letter-spacing: -.1px;
+}
+.sidebar > .sidebar__content + .sidebar__content {
+  padding: 3.3076923077em 0 0;
+}
+@media (max-width: 928px) {
+  .sidebar > .sidebar__content + .sidebar__content {
+    padding: 0.7692307692em 0 0;
+  }
+}
+
+.progressbar {
+  padding: 0 0 2.3076923077em;
+  border-collapse: separate;
+  border-spacing: 0.0769230769em 0;
+}
+@media (max-width: 928px) and (min-width: 688px) {
+  .progressbar {
+    padding: 0.3846153846em 0 1.5384615385em;
+  }
+}
+@media (max-width: 687px) {
+  .progressbar {
+    display: none;
+  }
+}
+.progressbar > tbody {
+  padding: 0.4615384615em 0 0;
+}
+.progressbar__header {
+  font-size: 22px;
+  letter-spacing: 1.3px;
+}
+@media (max-width: 687px) {
+  .progressbar__header {
+    display: none;
+  }
+}
+.progressbar .progressbar__division--done, .progressbar .progressbar__division--during, .progressbar .progressbar__division--not-started {
+  width: 7.4166666667em;
+  height: 1.1666666667em;
+  text-align: center;
+  font-size: 12px;
+}
+.progressbar__division--done {
+  color: #fff;
+  background: darkgreen;
+  background: -webkit-linear-gradient(#369e17, #3bad19);
+  background: linear-gradient(#369e17, #3bad19);
+  box-shadow: inset 0 1px 0 #21600e;
+}
+.progressbar__division--during {
+  color: #fff;
+  background: lightgreen;
+  background: -webkit-linear-gradient(#94c404, #a4d807);
+  background: linear-gradient(#94c404, #a4d807);
+  box-shadow: inset 0 1px 0 #597602;
+}
+.progressbar__division--not-started {
+  color: #7b7b7b;
+  background: #f6f6f6;
+  box-shadow: inset 0 1px 0 rgba(150, 150, 150, 0.7);
+}
+#progressbar__first-division {
+  border-radius: 2px 0 0 2px;
+  box-shadow: inset 1px 1px 0 rgba(150, 150, 150, 0.7);
+}
+#progressbar__last-division {
+  border-radius: 0 2px 2px 0;
+  box-shadow: inset -1px 1px 0 rgba(150, 150, 150, 0.7);
+}
+
+@media (max-width: 687px) {
+  .common-info {
+    margin: 0.7692307692em 0 0;
+  }
+}
+.common-info > tbody > tr > td:first-child {
+  width: 20%;
+  letter-spacing: .4px;
+  text-indent: 3px;
+}
+@media (max-width: 687px) {
+  .common-info > tbody > tr > td:first-child {
+    width: 25%;
+  }
+}
+.common-info > tbody > tr > td:last-child {
+  color: #666666;
+}
+.common-info > tbody > tr > td:last-child > hr {
+  border-top: 1px solid;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+input[name="name"]:focus,
+input[name="surname"]:focus,
+input[name="patronymic"]:focus,
+input[name="birthplace"]:focus {
+  outline: 0;
+}
+
+.form {
+  padding: 1.3846153846em 0 0;
+}
+@media (max-width: 687px) {
+  .form {
+    padding: 0.7692307692em 0 0;
+  }
+}
+.form .form__element--input--short, .form .form__element--input--long, .form .form__element--radio--short--fieldset, .form .form__element--select--long, .form .form__element--select--short, .form .form__element--birth-day {
+  padding: 0 0 2.3846153846em;
+}
+@media (max-width: 687px) {
+  .form .form__element--input--short, .form .form__element--input--long, .form .form__element--radio--short--fieldset, .form .form__element--select--long, .form .form__element--select--short, .form .form__element--birth-day {
+    width: 100% !important;
+  }
+}
+.form .form__element--input--short, .form .form__element--radio--short--fieldset, .form .form__element--select--short {
+  margin-right: 3.1538461538em;
+  width: 14.1538461538em;
+}
+.form .form__element--input--long, .form .form__element--select--long {
+  width: 17.6153846154em;
+}
+.form .form__element--input--short > label, .form .form__element--input--long > label,
+.form .form__element--select--long > label,
+.form .form__element--select--short > label {
+  padding: 0 0 0.6153846154em;
+}
+.form .form__element--input--short, .form .form__element--input--long {
+  height: 5.8461538462em;
+}
+.form .form__element--input--short > input, .form .form__element--input--long > input {
+  height: 1.6923076923em;
+}
+.form .form__element--select--long, .form .form__element--select--short {
+  height: 5.6923076923em;
+}
+.form .form__element--select--long > select, .form .form__element--select--short > select {
+  height: 1.5384615385em;
+}
+.form .form__element--radio--short--fieldset {
+  height: 5.6923076923em;
+}
+.form .form__element--radio--short--fieldset > legend {
+  padding: 0 0 0.4615384615em;
+}
+.form .form__element--radio--short--fieldset > .radio-wrapper > label {
+  border-bottom: 1px dotted;
+  cursor: pointer;
+  padding: 0.1923076923em 0.4615384615em;
+}
+.form .form__element--radio--short--fieldset > .radio-wrapper > input {
+  display: none;
+}
+@media (max-width: 928px) and (min-width: 688px) {
+  .form--wrapper {
+    padding: 1.5384615385em 0 0;
+  }
+}
+.form__element--birth-day > legend {
+  padding: 0 0 0.6923076923em;
+}
+.form__element--birth-day > input {
+  width: auto;
+}
+.form__element--birth-day > select {
+  margin: 0 0.5384615385em 0 0;
+}
+.form__element--birthplace > input {
+  margin: 0.5384615385em 0 0.6923076923em;
+}
+
+.support-info, .support-info--italic {
+  font-size: 12px;
+  color: #666666;
+}
+
+.support-info--italic {
+  font-style: italic;
+}
+
+.form__element--submit {
+  margin: 1em 0 0;
+  padding: 1.1538461538em 0.7692307692em;
+  background: #f2f2f2;
+}
+@media (max-width: 928px) {
+  .form__element--submit {
+    margin: 0.7692307692em 0;
+  }
+}
+
+.button--cancel {
+  background: grey;
+  background: -webkit-linear-gradient(#c2c2c2, #969696);
+  background: linear-gradient(#c2c2c2, #969696);
+  box-shadow: inset 0 -1px 3px #7e7e7e;
+}
+
+.button--submit {
+  background: green;
+  background: -webkit-linear-gradient(#a6db08, #93c303);
+  background: linear-gradient(#a6db08, #93c303);
+  box-shadow: inset 0 -1px 3px #7da703;
+}
+
+.button--submit,
+.button--cancel {
+  padding: 0.7692307692em 2.5384615385em;
+  border-radius: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+.button--submit > img,
+.button--cancel > img {
+  margin: 0 0 2px;
+}
+.button--submit:focus,
+.button--cancel:focus {
+  outline: none;
+}
+@media (max-width: 687px) {
+  .button--submit,
+  .button--cancel {
+    padding: 0.6923076923em;
+  }
+}
+
+#burger {
+  display: none;
+  margin: 0.3846153846em auto 0.7692307692em auto;
+  padding: 0.6923076923em 0.7692307692em;
+  width: 1.6923076923em;
+  height: 1.0769230769em;
+  background: #999;
+  cursor: pointer;
+}
+#burger:hover {
+  background: deeppink;
+}
+@media (max-width: 687px) {
+  #burger {
+    display: block;
+  }
+}
+#burger > span {
+  margin: auto;
+  height: 0.1538461538em;
+  background: #fff;
+}
+#burger > span + span {
+  margin-top: 0.3076923077em;
+}
+
+/*# sourceMappingURL=style.css.map */

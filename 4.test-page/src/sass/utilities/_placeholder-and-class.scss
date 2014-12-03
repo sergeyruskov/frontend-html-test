@@ -1,0 +1,82 @@
+//Transition
+%transition--link {
+	transition: 2.2s;
+}
+
+//Hover
+%hover {
+	&:hover {
+		background: deeppink;
+	}
+}
+
+//Box-sizing
+%box-sizing {
+	box-sizing: border-box;
+}
+
+//Display
+%inline-block {
+	display: inline-block;
+}
+
+%block {
+	display: block;
+}
+
+//Текст
+%align-center {
+	text-align: center;
+}
+
+%uppercase {
+	text-transform: uppercase;
+}
+
+//Overflow
+%overflow-hidden {
+	overflow: hidden;
+}
+
+//Position
+%position-relative {
+	position: relative;
+}
+
+%position-absolute {
+	position: absolute;
+}
+
+//Margin
+%margin-auto {
+	margin: auto;
+}
+
+%margin0 {
+	margin: 0;
+}
+
+%width100 {
+	width: 100%;
+}
+
+//Border
+%border0 {
+	border: 0;
+}
+
+//Class
+
+//Hide
+
+.right {
+	float: right; //без important
+}
+
+.left {
+	float: left; //без important
+}
+
+.bold {
+	font-weight: 700;
+}

@@ -1,0 +1,37 @@
+//Обертки
+body {
+	@extend %margin-auto;
+	@extend %box-sizing;
+	font-size  : $font-size--base;
+	font-family: $font-family;
+	max-width  : em(map-get(map-get($screen, sm), min));
+	padding    : map-get(map-get($layout, sm), top) 0 0;
+	@include tablet--less {
+		padding: 0;
+	}
+}
+
+	.wrapper--content {
+		@extend %margin-auto;
+		@extend %overflow-hidden;
+		width: em(map-get(map-get($layout, sm), content));
+		@include tablet {
+			width: map-get(map-get($screen, tablet), min);
+		}
+		@include xs {
+			width: map-get(map-get($layout, xs), content);
+		}
+	}
+
+		.main {
+			@extend .left;
+			width: em(map-get(map-get($layout, sm), right-column));
+			@include tablet {
+				float: none;
+				margin: auto;
+				width: map-get(map-get($screen, tablet), min);
+			}
+			@include xs {
+				width: 100%;
+			}
+		}

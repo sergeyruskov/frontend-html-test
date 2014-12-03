@@ -1,0 +1,17 @@
+{
+  "name": "tutu",
+  "version": "0.0.1",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-coffee": "latest",
+    "gulp-compass": "latest",
+    "gulp-concat": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-jsonminify": "latest",
+    "gulp-livereload": "latest",
+    "gulp-minify-html": "latest",
+    "gulp-plumber": "latest",
+    "gulp-uglify": "latest"
+  }
+}
